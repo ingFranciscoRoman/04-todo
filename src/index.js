@@ -3,9 +3,10 @@ import { Todo, TodoList } from './classes';
 import { crearHtml } from './js/componentes';
 
 export const todoList = new TodoList();
-const tarea = new Todo('Aprender Javascript!!');
 
-//tarea.completado = true; Eso eeee
+todoList.todos.forEach(todo => {
+    crearHtml( todo );
+});
 
-console.log( todoList );
-crearHtml( tarea );
+console.log( "todo", todoList.todos );
+
